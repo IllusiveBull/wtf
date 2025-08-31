@@ -1,0 +1,27 @@
+# Days Matter Widget Example Configuration
+# Add this to your ~/.config/wtf/config.yml
+
+daysmatter:
+  enabled: true
+  position:
+    top: 0
+    left: 0
+    height: 2
+    width: 1
+  refreshInterval: 1h
+  events:
+    - name: "生日"
+      date: "1990-05-15"
+      yearly: true
+    - name: "结婚纪念日"
+      date: "2020-10-01"
+      yearly: true
+    - name: "项目截止日期"
+      date: "2024-12-31"
+      yearly: false
+    - name: "春节"
+      date: "2024-02-10"
+      yearly: true
+    - name: "公司成立日"
+      date: "2018-03-20"
+      yearly: true

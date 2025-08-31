@@ -21,6 +21,7 @@ import (
 	"github.com/wtfutil/wtf/modules/cryptocurrency/cryptolive"
 	"github.com/wtfutil/wtf/modules/cryptocurrency/mempool"
 	"github.com/wtfutil/wtf/modules/datadog"
+	"github.com/wtfutil/wtf/modules/daysmatter"
 	"github.com/wtfutil/wtf/modules/devto"
 	"github.com/wtfutil/wtf/modules/digitalclock"
 	"github.com/wtfutil/wtf/modules/digitalocean"
@@ -169,6 +170,9 @@ func MakeWidget(
 	case "datadog":
 		settings := datadog.NewSettingsFromYAML(moduleName, moduleConfig, config)
 		widget = datadog.NewWidget(tviewApp, redrawChan, pages, settings)
+	case "daysmatter":
+		settings := daysmatter.NewSettingsFromYAML(moduleName, moduleConfig, config)
+		widget = daysmatter.NewWidget(tviewApp, redrawChan, settings)
 	case "devto":
 		settings := devto.NewSettingsFromYAML(moduleName, moduleConfig, config)
 		widget = devto.NewWidget(tviewApp, redrawChan, pages, settings)
