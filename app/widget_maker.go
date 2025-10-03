@@ -71,6 +71,7 @@ import (
 	"github.com/wtfutil/wtf/modules/stocks/finnhub"
 	"github.com/wtfutil/wtf/modules/stocks/yfinance"
 	"github.com/wtfutil/wtf/modules/subreddit"
+	"github.com/wtfutil/wtf/modules/systemtemp"
 	"github.com/wtfutil/wtf/modules/textfile"
 	"github.com/wtfutil/wtf/modules/todo"
 	"github.com/wtfutil/wtf/modules/todo_plus"
@@ -317,6 +318,9 @@ func MakeWidget(
 	case "subreddit":
 		settings := subreddit.NewSettingsFromYAML(moduleName, moduleConfig, config)
 		widget = subreddit.NewWidget(tviewApp, redrawChan, pages, settings)
+	case "systemtemp":
+		settings := systemtemp.NewSettingsFromYAML(moduleName, moduleConfig, config)
+		widget = systemtemp.NewWidget(tviewApp, redrawChan, pages, settings)
 	case "textfile":
 		settings := textfile.NewSettingsFromYAML(moduleName, moduleConfig, config)
 		widget = textfile.NewWidget(tviewApp, redrawChan, pages, settings)

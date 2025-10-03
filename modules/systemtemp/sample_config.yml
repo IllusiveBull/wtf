@@ -1,0 +1,13 @@
+systemtemp:
+  enabled: true
+  position:
+    top: 0
+    left: 0
+    height: 3
+    width: 1
+  refreshInterval: 5s
+  showCPU: true
+  showGPU: true
+  showSSD: true
+  showMem: true
+  showBattery: true
